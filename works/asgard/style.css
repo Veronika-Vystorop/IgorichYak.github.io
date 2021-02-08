@@ -455,6 +455,10 @@ input[type="search"]::-webkit-search-results-decoration  { display: none; }
     display: block;
 }
 
+.card_link {
+    transition: none;
+}
+
 .card_link:hover {
     color: white;
 }

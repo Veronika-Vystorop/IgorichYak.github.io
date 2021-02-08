@@ -142,7 +142,7 @@ function handlerClickLinks(event){
     let int = setInterval(()=>{
         if(direction){
             if(p <= step) clearInterval(int);
-
+            
             if(p>target.getBoundingClientRect().top + pageYOffset - h){
                 p -= step;
             } else {
@@ -208,19 +208,6 @@ function emulateSelector(select) {
             if(item.disabled) option.classList.add('disabled');
             emulList.append(option);
         });
-
-        if(select.dataset.search) {
-            let searchBox = document.createElement('div');
-            searchBox.classList = 'select_option select_search';
-            searchBox.innerHTML = `<input class="select_search_input" type="text" placeholder="Поиск..." />`;
-            let search = searchBox.querySelector('input');
-            emulList.append(searchBox);
-
-            let searchResult = document.createElement('div');
-            searchResult.classList = 'select_option select_search_result hidden';
-            searchResult.textContent = 'Нет совпадений'
-            emulList.append(searchResult);
-        }
 
         select.parentNode.append(emul);
 

@@ -442,7 +442,7 @@ input[type="search"]::-webkit-search-results-decoration  { display: none; }
     align-items: center;
     font-weight: 700;
     font-size: 20px;
-    transition: 0.3;
+    transition: 0.5s all;
     position: relative;
 }
 

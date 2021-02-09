@@ -159,8 +159,17 @@ p:last-child {
     top: unset;
     bottom: -20%;
     left: unset;
-    right: 10%;
+    right: 5%;
     max-width: 200px;
+}
+
+.portfolio_list_svg {
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.portfolio_list_svg:hover .portfolio_list_path {
+    fill: black;
 }
 
 .portfolio_photo_mob_wrap {
@@ -188,6 +197,12 @@ p:last-child {
 
 .about_social_link:hover .social_path{
     fill: black;
+}
+
+@media screen and (max-width: 1400px) {
+    .porfolio_photo_img_mob {
+        right: -10%;
+    }
 }
 
 @media screen and (max-width: 1100px) {

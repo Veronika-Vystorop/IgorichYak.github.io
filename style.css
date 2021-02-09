@@ -140,7 +140,7 @@ p:last-child {
     max-height: 600px;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     box-shadow: 0 0 22px -4px rgb(0 0 0 / 17%);
 }
@@ -157,10 +157,15 @@ p:last-child {
     max-height: 350px;
     height: 100%;
     top: unset;
-    bottom: -30%;
+    bottom: -20%;
     left: unset;
     right: 10%;
     max-width: 200px;
+}
+
+.portfolio_photo_mob_wrap {
+    max-height: 450px;
+    max-width: 1000px;
 }
 
 .about_main {

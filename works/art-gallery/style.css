@@ -1551,6 +1551,7 @@ input[type="search"]::-webkit-search-results-decoration  { display: none; }
 
 .blog_slider_content_footer_likes {
     display: flex;
+    transition: none;
 }
 
 .blog_slider_content_footer_time_svg,

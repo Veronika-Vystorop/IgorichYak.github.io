@@ -92,7 +92,6 @@ a:hover {
 ul li,
 ol li {
     list-style-type: none;
-    margin-bottom: 5px;
 }
 
 label {
@@ -200,6 +199,7 @@ input[type="search"]::-webkit-search-results-decoration  { display: none; }
     top: 0;
     left: 0;
     background-color: white;
+    color: #363d41;
 }
 
 .top_header {
@@ -427,13 +427,63 @@ input[type="search"]::-webkit-search-results-decoration  { display: none; }
         align-items: baseline;
     }
 
+    .menu_mob-sublist_block {
+        display: none;
+    }
+
+    .menu_mob-sublist_block.active {
+        display: block;
+    }
+
+    .menu_mob_drop-down_svg {
+        transition: 0.3s ease;
+    }
+
+    .menu_list_title.active .menu_mob_drop-down_svg {
+        transform: rotate(180deg);
+    }
+
+    .menu_list_title:hover .menu_mob_drop-down_fill {
+        fill: white;
+    }
+
+    .menu_mob-sublist_link {
+        transition: none;
+        padding: 12px 20px;
+        display: block;
+        text-transform: capitalize;
+        padding-left: 40px;
+    }
+
+    .menu_list_mobile_item:hover,
+    .menu_mob-sublist_link:hover {
+        color: white;
+    }
+
+    .menu_list_mobile_item.active {
+        color: white;
+    }
+
     .menu_list_item_mobile {
         margin: 0;
-        padding: 16px;
+        padding-right: 0;
         width: 100%;
         transition: .3s ease-in;
         cursor: pointer;    
         margin-top: 4px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu_list_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu_drop-down_mob {
+        width: 24px;
+        height: 24px;
     }
 
     .menu_list_item_mobile:first-child {
@@ -444,7 +494,17 @@ input[type="search"]::-webkit-search-results-decoration  { display: none; }
         transition: none;
     }
 
-    .menu_list_item_mobile:hover {
+    .menu_list_mobile_item {
+        padding: 12px 20px;
+    }
+
+    .menu_drop-down_mob {
+        margin-right: 15px;
+    }
+
+    .menu_mob-sublist_link:hover,
+    .menu_list_mobile_item:hover,
+    .menu_list_title:hover {
         color: white;
         background: #af9f7b;
     }

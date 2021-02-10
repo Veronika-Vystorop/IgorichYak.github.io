@@ -68,6 +68,16 @@ function switchClass(elem) {
   document.querySelector(elem).classList.toggle('active');
 }
 
+function removeMobClassActive() {
+  document.querySelectorAll('.menu_list_title').forEach(item => {
+    item.classList.remove('active');
+  });
+
+  document.querySelectorAll('.menu_mob-sublist_block').forEach(item => {
+    item.classList.remove('active');
+  });
+}
+
 window.addEventListener('click', (e) => {
   if (e.target.classList.contains('menu_toggle_wrapper') || e.target.classList.contains('menu_toggle')) {
 
@@ -76,6 +86,7 @@ window.addEventListener('click', (e) => {
       switchClass('.phone_block_wrapper');
     }
 
+    removeMobClassActive();
     switchClass('.menu_toggle_wrapper');
     switchClass('.mobile_header');
   }
@@ -85,9 +96,17 @@ window.addEventListener('click', (e) => {
     if (document.querySelector('.menu_toggle_wrapper').classList.contains('active')) {
       switchClass('.menu_toggle_wrapper');
       switchClass('.mobile_header');
+      removeMobClassActive();
     }
 
     switchClass('.phone_block_dot');
     switchClass('.phone_block_wrapper');
   }
+
+  if (e.target.classList.contains('menu_list_title')) { //mobile drop-down
+    e.target.parentNode.querySelector('.menu_mob-sublist_block').classList.toggle('active');
+    e.target.classList.toggle('active');
+  }
 });
+
+

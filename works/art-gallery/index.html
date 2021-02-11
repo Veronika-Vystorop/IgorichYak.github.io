@@ -39,9 +39,21 @@
         <section class="center_main_block-wrapper about_us-wrapper">
             <div class="about_us center_main_block">
                 <div class="about_us_video_block">
-                    <video controls class="about_us_video">
-                        <source src="assets/video/main_page.mp4" type="video/mp4" />
+                    <video class="about_us_video" poster="assets/imgs/video-bg.jpg">
+                        <source class="about_us_video_source" src="assets/video/main_page.mp4" type="video/mp4" />
                     </video>
+                    <div class="video_controls">
+                        <div class="video_play active">
+                            <svg class="video_play_svg" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="video_play_fill" d="M8 5V19L19 12L8 5Z" fill="white"/>
+                            </svg>                                
+                        </div>
+                        <div class="video_pause">
+                            <svg class="video_pause_svg" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="video_pause_fill" d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="white"/>
+                            </svg>                                
+                        </div>
+                    </div>
                 </div>
                 <div class="about_us_content_block-wrapper">
                     <div class="about_us_content_block">

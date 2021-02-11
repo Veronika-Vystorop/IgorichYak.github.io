@@ -107,6 +107,26 @@ window.addEventListener('click', (e) => {
     e.target.parentNode.querySelector('.menu_mob-sublist_block').classList.toggle('active');
     e.target.classList.toggle('active');
   }
+  
+  if (e.target.classList.value.search(/video_play/i) || e.target.classList.value.search(/video_pause/i)) { //video play|pause
+    switchVideo();
+  }
 });
 
+function switchVideo() {
+  let videoBlock = document.querySelector('.about_us_video');
+
+  switchClass('.video_play');
+  switchClass('.video_pause');
+
+  if (videoBlock.classList.contains('active')) {
+    videoBlock.src = "";
+    document.querySelector('.about_us_video').pause();
+  } else {
+    videoBlock.src = "assets/video/main_page.mp4";
+    document.querySelector('.about_us_video').play();
+  }
+
+  videoBlock.classList.toggle('active');
+}
 

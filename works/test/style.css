@@ -221,6 +221,14 @@ ol li {
 }
 
 @media screen and (max-width: 1100px) {
+    .header_wrap {
+        width: 90%;
+        margin: 20px auto;
+        border: 1px solid #73F9BC;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .menu_burger {
         display: block;
         max-width: 15px;
@@ -553,6 +561,7 @@ ol li {
 
 .track {
     color: white;
+    padding-bottom: 75px!important;
 }
 
 .track_table {

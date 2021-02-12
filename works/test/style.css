@@ -206,6 +206,7 @@ ol li {
 .menu_list {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .menu_burger {

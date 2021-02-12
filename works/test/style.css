@@ -254,7 +254,7 @@ ol li {
         top: 0;
         left: -1px;
         flex-direction: column;
-        width: 100vw;
+        width: 100%;
         background: #171716;
     }
 

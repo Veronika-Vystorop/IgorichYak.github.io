@@ -234,3 +234,7 @@ p:last-child {
         padding: 25px 20px;
     }
 }
+
+.test_link {
+    opacity: 0;
+}
